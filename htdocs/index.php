@@ -1,3 +1,4 @@
 echo "Hello Git!"
-echo "Hello Git!"
-echo "Hello new brahch"
+echo "Hello Git2!"
+echo "Hello new branch!"
+ 
