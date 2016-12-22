@@ -20,7 +20,7 @@ public class JobSearch {
 	}
 
 	@Test
-	public void FortisPageTest() {
+	public void MailRU() {
 		HomePage home = new HomePage(wd);
 		ResultPage result = home.search("mailRu");
 		assertTrue(result.WordInsideSentence().contains("mailRu"));
