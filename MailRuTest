@@ -1,0 +1,30 @@
+import static org.junit.Assert.assertTrue;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class JobSearch {
+	private FirefoxDriver wd;
+
+	@Before
+	public void SetUp() {
+		wd = new FirefoxDriver();
+		wd.get("https://spb.hh.ru/");
+	}
+
+	@After
+	public void tearDown() {
+		wd.close();
+	}
+
+	@Test
+	public void FortisPageTest() {
+		HomePage home = new HomePage(wd);
+		ResultPage result = home.search("mailRu");
+		assertTrue(result.WordInsideSentence().contains("mailRu"));
+
+	}
+
+}
