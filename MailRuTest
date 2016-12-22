@@ -20,10 +20,10 @@ public class JobSearch {
 	}
 
 	@Test
-	public void MailRU() {
+	public void QualityAssuranceJobSearch() {
 		HomePage home = new HomePage(wd);
-		ResultPage result = home.search("mailRu");
-		assertTrue(result.WordInsideSentence().contains("mailRu"));
+		ResultPage result = home.search("Qa");
+		assertTrue(result.GetFirstLink().contains("Qa"));
 
 	}
 
